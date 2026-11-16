@@ -1,5 +1,7 @@
 # Ohjelmisto 2 - verkkosovellus (väliaikainen)
 
+## Moi Harun :->
+
 ## Idea
 
 Pelin idea on suorittaa erilaisia tehtäviä, jotka koostuvat esineiden hankkimisesta ja käyttämisestä sekä sijainteihin liikkumisesta.  
