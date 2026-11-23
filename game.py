@@ -32,7 +32,7 @@ while True:
         input(divide("Olet muuttanut uuteen kaupunkiin ja huomaat, ettei alueella ole mahdollisuutta minkäänlaiseen koulutukseen. Otat tehtäväksesi rakentaa kaupungin asukkaille laadukkaan koulun."))
         input(f"\n{divide("Ennen lähtöä sinun tulee kerätä tavarasi mukaan. Tarvitset kartan sekä rakennusluvan. Et varmastikaan halua joutua vaikeuksiin virkavallan kanssa. Mitä laadukkaampi koulu, sitä paremmat pisteet. Onnea matkaan!")}")
         clear_shell()
-        while kartta not in player.inventory:
+        while rakennuslupa not in player.inventory:
             player.game_menu(player.status)
         keskusta.isLocked = metsä.isLocked = False
         player.status = "Valitse rakennuspaikka"
@@ -114,7 +114,7 @@ while True:
             if kellari in sorkkarauta.usedIn:
                 koti.isLocked = False
                 sorkkarauta.usedText = "Sorkkarauta uppoaa hyvin kujaa peittävien lautojen alle. Saat kangettua naulat irti ja avaat reitin kujalle."
-        työkalut.usedText = "Työkalulaatikossasi on saha, vasara, pora sekä ruuvimeisseli. Tarvitset näitä koulun rakentamiseen."
+        työkalut.itemNotUsed = "Työkalulaatikossasi on saha, vasara, pora sekä ruuvimeisseli. Tarvitset näitä koulun rakentamiseen."
         kellari.isLocked = True
         kauppa.hasItem.extend([kärryt, materiaalit])
         player.status = "Osta rakennustarvikkeet"

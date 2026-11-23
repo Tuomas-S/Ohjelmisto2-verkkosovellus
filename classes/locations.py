@@ -38,7 +38,7 @@ koti = Location(
     searchText = "Kotisi näyttää ihanan tunnelmalliselta. Tahtoisit mennä takaisin nukkumaan, mutta sinulla riittää vielä tekemistä.",
     isLocked = False,
     lockedText = "Rahoja etsiessä työnsit vahingossa kellarin oven kiinni ja lukitsit sen. Olet jumissa...",
-    hasItem = [kartta, rakennuslupa],
+    hasItem = [rakennuslupa],
     acceptsItem = [kirjat],
     connections = []
 )
@@ -96,7 +96,7 @@ raunio = Location(
 varasto = Location(
     name = "Varasto",
     searchText = "Laitat varaston valot päälle. Tomua kaikkialla. Et välttämättä halua lorvailla täällä turhan kauaa ellet halua tuberkuloosia.",
-    isLocked = True,
+    isLocked = False,
     lockedText = "Rakennuksen ovi on lukossa. Anna 5-numeroinen koodi päästäksesi sisään:",
     hasItem = [kirjat],
     acceptsItem = [],
