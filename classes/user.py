@@ -48,10 +48,9 @@ class User:
             item.name = itemData["name"]
             item.foundText = itemData["foundText"]
             item.usedText = itemData["usedText"]
-            if isinstance(item, Functional):
-                item.itemNotUsed = itemData["itemNotUsed"]
-                item.isSingleUse = itemData["isSingleUse"]
-                item.usedIn = [locationLookup[locationName] for locationName in itemData["usedIn"]]
+            item.itemNotUsed = itemData["itemNotUsed"]
+            item.isSingleUse = itemData["isSingleUse"]
+            item.usedIn = [locationLookup[locationName] for locationName in itemData["usedIn"]]
 
         # Ladataan sijainnit
         for locationData in data["locations"]:
@@ -60,7 +59,6 @@ class User:
             location.searchText = locationData["searchText"]
             location.isLocked = locationData["isLocked"]
             location.lockedText = locationData["lockedText"]
-            location.isLocked = locationData["isLocked"]
             location.hasItem = [itemLookup[itemName] for itemName in locationData["hasItem"]]
             location.acceptsItem = [itemLookup[itemName] for itemName in locationData["acceptsItem"]]
             location.connections = [locationLookup[locationName] for locationName in locationData["connections"]]
@@ -130,11 +128,7 @@ class User:
             for location in self.location.connections:
                 if choice.lower() == location.name.lower():
                     if location.isLocked:
-                        code = input(f"{fancyLine}{divide(location.lockedText)} ")
-                        if self.location == kuja and code == "52971" and varasto.isLocked == True:
-                            varasto.isLocked = False
-                            kuja.searchText = "Kujalla on erittäin ahdasta ja likaista. Onneksi et kärsi ahtaan paikan kammosta."
-                            input("\n» Lukko aukeaa. Oletko koskaan miettinyt etsiväksi ryhtymistä?")
+                        input(fancyLine + divide(location.lockedText))
                         break
                     print("  Siirrytään...")
                     time.sleep(random.randrange(1, 3))
@@ -163,38 +157,23 @@ class User:
     def item_use(self, choice):
         for item in self.inventory:
             if choice.lower() == item.name.lower():
-                if isinstance(item, Functional):
-                    if item in self.location.acceptsItem:
-                        if self.location in item.usedIn:
-                            input(f"{fancyLine}  Olet jo käyttänyt esineen tässä paikassa.")
-                            break
-                        print("  Käytetään esine...")
-                        time.sleep(random.randrange(1, 3))
-                        input(fancyLine + divide(item.usedText))
-                        item.usedIn.append(self.location)
-                        if item.isSingleUse:
-                            self.inventory.remove(item)
+                if item in self.location.acceptsItem:
+                    if self.location in item.usedIn:
+                        input(f"{fancyLine}  Olet jo käyttänyt esineen tässä paikassa.")
                         break
-                    else:
-                        input(fancyLine + divide(item.itemNotUsed))
-                        break
-
-                else:
                     print("  Käytetään esine...")
                     time.sleep(random.randrange(1, 3))
-                    if choice.lower() == "kartta":
-                        clear_shell()
-                        print(f"\n{kartta.usedText}")
-                        print(f"{fancyLine}{divide("Kartta kaikista kaupungin sijainneista. Jotkut sijainnit eivät ole aina saatavilla.")}\n")
-                        input(f"» Nykyinen sijaintisi: {self.location.name}")
-                        break
-                    else:
-                        input(fancyLine + divide(item.usedText))
-                        break
+                    input(fancyLine + divide(item.usedText))
+                    item.usedIn.append(self.location)
+                    if item.isSingleUse:
+                        self.inventory.remove(item)
+                    break
+                else:
+                    input(fancyLine + divide(item.itemNotUsed))
+                    break
         else:
             input(f"{fancyLine}  Esinettä ei löytynyt inventaariostasi.")
             self.inv_show()
-
         
     # Inventaario ja esineen valinta
     def inv_show(self):
