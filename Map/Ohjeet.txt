@@ -1,0 +1,15 @@
+instructions
+You need to make buttons for each of the locations 
+and do some kind of paths like white line of dots 
+i sent the picture on how to make one you can change paths any way you want 
+as long as it looks natural path  
+and when we change locations lets say from koti to keskusta
+the white lines change into red color when going from koti to keskusta
+one by one from koti to keskusta
+lets say we are currently at koti the koti button should have outline or some kind of 
+whitness to it that it shows you are there
+and path next to it which you can access are black 
+and paths that you cant access unless you get close to it 
+are grey and shouldnt be accessed until you get close to it
+and make nice looking buttons 
+if its too hard we can help or need some kind of advice on how to make it look 

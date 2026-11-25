@@ -1,0 +1,4 @@
+instructions
+the menu should be transparent but little bit 
+the menu should be dark color tho 
+and buttons or text light color
