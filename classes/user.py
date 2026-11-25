@@ -5,6 +5,7 @@ from pathlib import Path
 from classes.items import *
 from classes.locations import *
 from misc.text_format import *
+from collections import deque
 
 class User:
     def __init__(self, name, age, location, status, inventory):
@@ -113,31 +114,55 @@ class User:
 
 
     # Pelaajan liikkuminen
+    def find_path(self, target):
+        queue = deque([(self.location, [self.location])])
+        visited = {self.location}
+
+        while queue:
+            current, path = queue.popleft()
+            if current == target:
+                return path[1:]
+
+            for neighbor in current.connections:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.append((neighbor, path + [neighbor]))
+        return None
+
     def move(self):
         clear_shell()
-        print("╭─────────────────────────────────────────────╮ \n"
-              "│ Voit siirtyä seuraaviin paikkoihin:         │")
-        for location in self.location.connections:
-            print(f"│ » {location.name:<42}│")
-        choice = input("╰─────────────────────────────────────────────╯ \n\n"
-                       "  Liiku paikkaan kirjoittamalla sen nimi. \n"
-                       "  [enter] = takaisin \n\n"
+        choice = input("  ╭───────────────═══════════════════───────═════╗\n"
+                       "  │                                         ^    ║\n"
+                       "  │           皿  ⌂ ⌂                       N    ║\n"
+                       "  ║    ╭╌╌ [ Keskusta ] ══╤═ [ Koti ][ Kellari ] ║\n"
+                       "  ║    ┆        ║ ⌂⌂      │      ┆   ♣Ψ         ─╢\n"
+                       "  │ [ Kuja ]  ⌂ ║         ╰─ [ Metsä ] ╌╌╌╮      │\n"
+                       "  │    ┆        ║    [ Vaja ] ╌╯ │ ⌂      ┆      │\n"
+                       "  ║    ┆    [ Kauppa ]         ♣ │    [ Raunio ] ║\n"
+                       "  ╠═   ┆                         │ Ψ      ┆      ║\n"
+                       "  ║    ╰╌ [ Varasto ] † †    [ Pelto ] ╌╌╌╯      ║\n"
+                       "  ║                    †                 ~~~     │\n"
+                       "  ║                        ▲▲                    │\n"
+                       "  ╚═════════─────════════────────────────────────╯\n\n"
+                       "  Liiku kirjoittamalla sijainnin nimi.\n"
+                       "  [enter] = takaisin\n\n"
                        "  Valitse toiminto: ")
-        
-        if choice != "":
-            for location in self.location.connections:
-                if choice.lower() == location.name.lower():
-                    if location.isLocked:
-                        input(fancyLine + divide(location.lockedText))
-                        break
-                    print("  Siirrytään...")
-                    time.sleep(random.randrange(1, 3))
-                    self.location = location
-                    break
-            else:
-                input(f"{fancyLine}  Sijaintia ei löytynyt.")
-                self.move()
+        if choice == "":
+            return
 
+        target = next((location for location in allLocations if location.name.lower() == choice.lower()), None)
+        if not target:
+            input(f"{fancyLine}  Sijaintia ei löytynyt.")
+            self.move()
+
+        path = self.find_path(target)
+        for step in path:
+            print(f"  Siirrytään: {step.name}...")
+            time.sleep(random.randrange(1, 3))
+            if step.isLocked:
+                input(fancyLine + divide(step.lockedText))
+                break
+            self.location = step
 
     # Sijainnin tutkiminen
     def search(self):

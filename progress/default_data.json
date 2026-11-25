@@ -238,16 +238,10 @@
         }
     ],
     "user": {
-        "name": "Tuomas",
-        "age": 15,
-        "location": "Kauppa",
-        "status": "Osta rakennustarvikkeet",
-        "inventory": [
-            "Rahaa",
-            "Työkalut",
-            "Sorkkarauta",
-            "Kärryt",
-            "Materiaalit"
-        ]
+        "name": "Pena peluri",
+        "age": 2500,
+        "location": "Koti",
+        "status": "Pakkaa tavarasi mukaan",
+        "inventory": []
     }
 }
