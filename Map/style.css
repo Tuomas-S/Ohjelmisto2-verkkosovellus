@@ -89,8 +89,8 @@
 }
 #shed {
   position: absolute;
-  left: 75%;
-  top: 65%;
+  left: 80%;
+  top: 37%;
 }
 #store {
   position: absolute;
@@ -99,7 +99,7 @@
 }
 #ruin {
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 85%;
 }
 #field {
@@ -109,6 +109,6 @@
 }
 #alley {
   position: absolute;
-  left: 35%;
-  top: 10%;
+  left: 20%;
+  top: 9%;
 }
