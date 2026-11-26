@@ -10,13 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <script src="map.js" defer></script>
     <title>Map</title>
   </head>
   <body>
     <div class="containermap" id="map">
       <img class="compass" src="compass.jpeg" alt="compass" />
       <button class="location" id="forest">
-        <span class="loclable">mesä</span>
+        <span class="loclable">metsä</span>
         <span class="locpin">📍</span>
       </button>
       <button class="location" id="house">
@@ -55,6 +56,128 @@
         <span class="loclable">kuja</span>
         <span class="locpin">📍</span>
       </button>
+      <div class="alldots">
+        <span class="dot" id="koti-keskusta1"></span>
+        <span class="dot" id="koti-keskusta2"></span>
+        <span class="dot" id="koti-keskusta3"></span>
+        <span class="dot" id="koti-keskusta4"></span>
+        <span class="dot" id="koti-keskusta5"></span>
+        <span class="dot" id="koti-keskusta6"></span>
+        <span class="dot" id="koti-keskusta7"></span>
+        <span class="dot" id="koti-kellari8"></span>
+        <span class="dot" id="koti-kellari9"></span>
+        <span class="dot" id="koti-kellari10"></span>
+        <span class="dot" id="kellari-vaja11"></span>
+        <span class="dot" id="kellari-vaja12"></span>
+        <span class="dot" id="kellari-vaja13"></span>
+        <span class="dot" id="kellari-vaja14"></span>
+        <span class="dot" id="kellari-vaja15"></span>
+        <span class="dot" id="kellari-vaja16"></span>
+        <span class="dot" id="kellari-vaja17"></span>
+        <span class="dot" id="vaja-raunio18"></span>
+        <span class="dot" id="vaja-raunio19"></span>
+        <span class="dot" id="vaja-raunio20"></span>
+        <span class="dot" id="vaja-raunio21"></span>
+        <span class="dot" id="raunio-pelto22"></span>
+        <span class="dot" id="raunio-pelto23"></span>
+        <span class="dot" id="raunio-pelto24"></span>
+        <span class="dot" id="raunio-pelto25"></span>
+        <span class="dot" id="raunio-pelto26"></span>
+        <span class="dot" id="raunio-pelto27"></span>
+        <span class="dot" id="raunio-pelto28"></span>
+        <span class="dot" id="raunio-pelto30"></span>
+        <span class="dot" id="raunio-pelto31"></span>
+        <span class="dot" id="raunio-pelto32"></span>
+        <span class="dot" id="metsä-pelto33"></span>
+        <span class="dot" id="metsä-pelto34"></span>
+        <span class="dot" id="metsä-pelto35"></span>
+        <span class="dot" id="metsä-pelto36"></span>
+        <span class="dot" id="metsä-pelto37"></span>
+        <span class="dot" id="metsä-pelto38"></span>
+        <span class="dot" id="metsä-pelto39"></span>
+        <span class="dot" id="metsä-pelto40"></span>
+        <span class="dot" id="metsä-pelto41"></span>
+        <span class="dot" id="metsä-pelto42"></span>
+        <span class="dot" id="metsä-pelto43"></span>
+        <span class="dot" id="metsä-pelto44"></span>
+        <span class="dot" id="metsä-pelto45"></span>
+        <span class="dot" id="metsä-raunio46"></span>
+        <span class="dot" id="metsä-raunio47"></span>
+        <span class="dot" id="metsä-raunio48"></span>
+        <span class="dot" id="metsä-raunio49"></span>
+        <span class="dot" id="metsä-raunio50"></span>
+        <span class="dot" id="metsä-raunio51"></span>
+        <span class="dot" id="metsä-raunio52"></span>
+        <span class="dot" id="metsä-raunio53"></span>
+        <span class="dot" id="metsä-raunio54"></span>
+        <span class="dot" id="metsä-raunio55"></span>
+        <span class="dot" id="koti-metsä56"></span>
+        <span class="dot" id="koti-metsä57"></span>
+        <span class="dot" id="koti-metsä58"></span>
+        <span class="dot" id="koti-metsä59"></span>
+        <span class="dot" id="koti-metsä60"></span>
+        <span class="dot" id="koti-metsä61"></span>
+        <span class="dot" id="keskusta-kauppa62"></span>
+        <span class="dot" id="keskusta-kauppa63"></span>
+        <span class="dot" id="keskusta-kauppa64"></span>
+        <span class="dot" id="keskusta-kauppa65"></span>
+        <span class="dot" id="keskusta-kauppa66"></span>
+        <span class="dot" id="keskusta-kauppa67"></span>
+        <span class="dot" id="keskusta-kauppa68"></span>
+        <span class="dot" id="keskusta-kauppa69"></span>
+        <span class="dot" id="kauppa-pelto70"></span>
+        <span class="dot" id="kauppa-pelto71"></span>
+        <span class="dot" id="kauppa-pelto72"></span>
+        <span class="dot" id="kauppa-pelto73"></span>
+        <span class="dot" id="kauppa-pelto74"></span>
+        <span class="dot" id="kauppa-pelto75"></span>
+        <span class="dot" id="kauppa-pelto76"></span>
+        <span class="dot" id="kauppa-pelto77"></span>
+        <span class="dot" id="kauppa-pelto78"></span>
+        <span class="dot" id="kauppa-pelto79"></span>
+        <span class="dot" id="kauppa-pelto80"></span>
+        <span class="dot" id="kauppa-pelto81"></span>
+        <span class="dot" id="kauppa-pelto82"></span>
+        <span class="dot" id="kauppa-pelto83"></span>
+        <span class="dot" id="kauppa-pelto84"></span>
+        <span class="dot" id="kauppa-pelto85"></span>
+        <span class="dot" id="kauppa-pelto86"></span>
+        <span class="dot" id="kauppa-pelto87"></span>
+        <span class="dot" id="kauppa-pelto88"></span>
+        <span class="dot" id="keskusta-kuja89"></span>
+        <span class="dot" id="keskusta-kuja90"></span>
+        <span class="dot" id="keskusta-kuja91"></span>
+        <span class="dot" id="keskusta-kuja92"></span>
+        <span class="dot" id="keskusta-kuja93"></span>
+        <span class="dot" id="keskusta-kuja94"></span>
+        <span class="dot" id="keskusta-kuja95"></span>
+        <span class="dot" id="keskusta-kuja96"></span>
+        <span class="dot" id="keskusta-kuja97"></span>
+        <span class="dot" id="keskusta-kuja98"></span>
+        <span class="dot" id="keskusta-kuja99"></span>
+        <span class="dot" id="keskusta-kuja100"></span>
+        <span class="dot" id="keskusta-kuja101"></span>
+        <span class="dot" id="kuja-varasto102"></span>
+        <span class="dot" id="kuja-varasto103"></span>
+        <span class="dot" id="kuja-varasto104"></span>
+        <span class="dot" id="kuja-varasto105"></span>
+        <span class="dot" id="kuja-varasto106"></span>
+        <span class="dot" id="kuja-varasto107"></span>
+        <span class="dot" id="kuja-varasto108"></span>
+        <span class="dot" id="kuja-varasto109"></span>
+        <span class="dot" id="kuja-varasto110"></span>
+        <span class="dot" id="kuja-varasto111"></span>
+        <span class="dot" id="kuja-varasto112"></span>
+        <span class="dot" id="kuja-varasto113"></span>
+        <span class="dot" id="kuja-varasto114"></span>
+        <span class="dot" id="keskusta-metsä115"></span>
+        <span class="dot" id="keskusta-metsä116"></span>
+        <span class="dot" id="keskusta-metsä117"></span>
+        <span class="dot" id="keskusta-metsä118"></span>
+        <span class="dot" id="keskusta-metsä119"></span>
+        <span class="dot" id="keskusta-metsä120"></span>
+        <span class="dot" id="keskusta-metsä121"></span>
+      </div>
     </div>
   </body>
 </html>

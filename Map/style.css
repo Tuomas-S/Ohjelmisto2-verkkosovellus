@@ -99,8 +99,8 @@
 }
 #ruin {
   position: absolute;
-  top: 60%;
-  left: 85%;
+  top: 51%;
+  left: 79.5%;
 }
 #field {
   position: absolute;
@@ -111,4 +111,517 @@
   position: absolute;
   left: 20%;
   top: 9%;
+}
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+#koti-keskusta1 {
+  top: 17%;
+  left: 59%;
+}
+#koti-keskusta2 {
+  top: 19%;
+  left: 57%;
+}
+#koti-keskusta3 {
+  top: 21%;
+  left: 55%;
+}
+#koti-keskusta4 {
+  top: 22%;
+  left: 53%;
+}
+#koti-keskusta5 {
+  top: 23%;
+  left: 51%;
+}
+#koti-keskusta6 {
+  top: 25%;
+  left: 48.75%;
+}
+#koti-keskusta7 {
+  top: 26%;
+  left: 47%;
+}
+#koti-kellari8 {
+  top: 16.5%;
+  left: 65%;
+}
+#koti-kellari9 {
+  top: 17%;
+  left: 67%;
+}
+#koti-kellari10 {
+  top: 18%;
+  left: 69%;
+}
+#kellari-vaja11 {
+  top: 21%;
+  left: 75%;
+}
+#kellari-vaja12 {
+  top: 23%;
+  left: 76%;
+}
+#kellari-vaja13 {
+  top: 25%;
+  left: 77%;
+}
+#kellari-vaja14 {
+  top: 27.5%;
+  left: 78.5%;
+}
+#kellari-vaja15 {
+  top: 29.5%;
+  left: 79.5%;
+}
+#kellari-vaja16 {
+  top: 32%;
+  left: 80.5%;
+}
+#kellari-vaja17 {
+  top: 35%;
+  left: 81%;
+}
+#vaja-raunio18 {
+  top: 41%;
+  left: 83%;
+}
+#vaja-raunio19 {
+  top: 43.5%;
+  left: 83%;
+}
+#vaja-raunio20 {
+  top: 46%;
+  left: 83%;
+}
+#vaja-raunio21 {
+  top: 49%;
+  left: 83%;
+}
+#raunio-pelto22 {
+  top: 55.3%;
+  left: 81.4%;
+}
+#raunio-pelto23 {
+  top: 58%;
+  left: 81%;
+}
+#raunio-pelto24 {
+  top: 61%;
+  left: 80.5%;
+}
+#raunio-pelto25 {
+  top: 64%;
+  left: 79%;
+}
+#raunio-pelto26 {
+  top: 66.85%;
+  left: 77%;
+}
+#raunio-pelto27 {
+  top: 69%;
+  left: 75%;
+}
+#raunio-pelto28 {
+  top: 70%;
+  left: 72.8%;
+}
+#raunio-pelto29 {
+  top: 73%;
+  left: 71%;
+}
+#raunio-pelto30 {
+  top: 72%;
+  left: 70.8%;
+}
+#raunio-pelto31 {
+  top: 72.5%;
+  left: 68%;
+}
+#raunio-pelto32 {
+  top: 72.5%;
+  left: 65.5%;
+}
+#metsä-pelto33 {
+  top: 42%;
+  left: 56%;
+}
+#metsä-pelto34 {
+  top: 44%;
+  left: 54%;
+}
+#metsä-pelto35 {
+  top: 47%;
+  left: 53%;
+}
+#metsä-pelto36 {
+  top: 50%;
+  left: 52%;
+}
+#metsä-pelto37 {
+  top: 53%;
+  left: 53%;
+}
+#metsä-pelto38 {
+  top: 56%;
+  left: 54%;
+}
+#metsä-pelto39 {
+  top: 59%;
+  left: 55%;
+}
+#metsä-pelto40 {
+  top: 62%;
+  left: 56%;
+}
+#metsä-pelto41 {
+  top: 65%;
+  left: 57%;
+}
+#metsä-pelto42 {
+  top: 68%;
+  left: 55.8%;
+}
+#metsä-pelto43 {
+  top: 71%;
+  left: 55%;
+}
+#metsä-pelto44 {
+  top: 71.9%;
+  left: 56.9%;
+}
+#metsä-pelto45 {
+  top: 71.9%;
+  left: 58.97%;
+}
+#metsä-raunio46 {
+  top: 42%;
+  left: 62.9%;
+}
+#metsä-raunio47 {
+  top: 44.5%;
+  left: 64%;
+}
+#metsä-raunio48 {
+  top: 46.5%;
+  left: 65.5%;
+}
+#metsä-raunio49 {
+  top: 48.9%;
+  left: 67%;
+}
+#metsä-raunio50 {
+  top: 51%;
+  left: 68%;
+}
+#metsä-raunio51 {
+  top: 53%;
+  left: 70%;
+}
+#metsä-raunio52 {
+  top: 54%;
+  left: 72%;
+}
+#metsä-raunio53 {
+  top: 54%;
+  left: 74.5%;
+}
+#metsä-raunio54 {
+  top: 54%;
+  left: 76.5%;
+}
+#metsä-raunio55 {
+  top: 54%;
+  left: 78.5%;
+}
+#koti-metsä56 {
+  top: 26.5%;
+  left: 62.5%;
+}
+#koti-metsä57 {
+  top: 29.5%;
+  left: 62%;
+}
+#koti-metsä58 {
+  top: 32%;
+  left: 62%;
+}
+#koti-metsä59 {
+  top: 34%;
+  left: 62%;
+}
+#koti-metsä60 {
+  top: 36%;
+  left: 61%;
+}
+#koti-metsä61 {
+  top: 38%;
+  left: 60%;
+}
+#keskusta-kauppa62 {
+  top: 37%;
+  left: 38.4%;
+}
+#keskusta-kauppa63 {
+  top: 39%;
+  left: 38.5%;
+}
+#keskusta-kauppa64 {
+  top: 41%;
+  left: 37.5%;
+}
+#keskusta-kauppa65 {
+  top: 43%;
+  left: 36.2%;
+}
+#keskusta-kauppa66 {
+  top: 45%;
+  left: 34.25%;
+}
+#keskusta-kauppa67 {
+  top: 47%;
+  left: 34.2%;
+}
+#keskusta-kauppa68 {
+  top: 49%;
+  left: 35%;
+}
+#keskusta-kauppa69 {
+  top: 51%;
+  left: 35.5%;
+}
+#kauppa-pelto70 {
+  top: 65%;
+  left: 36.5%;
+}
+#kauppa-pelto71 {
+  top: 67%;
+  left: 37%;
+}
+#kauppa-pelto72 {
+  top: 69%;
+  left: 37.5%;
+}
+#kauppa-pelto73 {
+  top: 71%;
+  left: 38.5%;
+}
+#kauppa-pelto74 {
+  top: 71.6%;
+  left: 40.5%;
+}
+#kauppa-pelto75 {
+  top: 73.6%;
+  left: 42.6%;
+}
+#kauppa-pelto76 {
+  top: 75%;
+  left: 44.5%;
+}
+#kauppa-pelto77 {
+  top: 77.6%;
+  left: 46%;
+}
+#kauppa-pelto78 {
+  top: 79.6%;
+  left: 47.5%;
+}
+#kauppa-pelto79 {
+  top: 81.5%;
+  left: 48.5%;
+}
+#kauppa-pelto80 {
+  top: 83.5%;
+  left: 49.5%;
+}
+#kauppa-pelto81 {
+  top: 82%;
+  left: 51.7%;
+}
+#kauppa-pelto82 {
+  top: 81.2%;
+  left: 54%;
+}
+
+#kauppa-pelto83 {
+  top: 82%;
+  left: 51.7%;
+}
+
+#kauppa-pelto84 {
+  top: 82%;
+  left: 56%;
+}
+
+#kauppa-pelto85 {
+  top: 80.8%;
+  left: 59%;
+}
+#kauppa-pelto86 {
+  top: 79%;
+  left: 61%;
+}
+#kauppa-pelto87 {
+  top: 77%;
+  left: 61.7%;
+}
+#kauppa-pelto88 {
+  top: 74.5%;
+  left: 61.65%;
+}
+#keskusta-kuja89 {
+  top: 24%;
+  left: 43%;
+}
+#keskusta-kuja90 {
+  top: 22%;
+  left: 43%;
+}
+#keskusta-kuja91 {
+  top: 20%;
+  left: 42%;
+}
+#keskusta-kuja92 {
+  top: 18%;
+  left: 41%;
+}
+#keskusta-kuja93 {
+  top: 16%;
+  left: 40%;
+}
+#keskusta-kuja94 {
+  top: 14.5%;
+  left: 39%;
+}
+#keskusta-kuja95 {
+  top: 13%;
+  left: 37.5%;
+}
+#keskusta-kuja96 {
+  top: 12%;
+  left: 35.8%;
+}
+#keskusta-kuja97 {
+  top: 11%;
+  left: 33.9%;
+}
+#keskusta-kuja98 {
+  top: 10.2%;
+  left: 31.8%;
+}
+
+#keskusta-kuja99 {
+  top: 10%;
+  left: 29.4%;
+}
+#keskusta-kuja100 {
+  top: 10%;
+  left: 27.4%;
+}
+#keskusta-kuja101 {
+  top: 10%;
+  left: 25.4%;
+}
+#kuja-varasto102 {
+  top: 11%;
+  left: 19%;
+}
+#kuja-varasto103 {
+  top: 13%;
+  left: 17%;
+}
+#kuja-varasto104 {
+  top: 15%;
+  left: 16%;
+}
+#kuja-varasto105 {
+  top: 17%;
+  left: 15%;
+}
+#kuja-varasto106 {
+  top: 19%;
+  left: 14%;
+}
+#kuja-varasto107 {
+  top: 21%;
+  left: 13%;
+}
+#kuja-varasto108 {
+  top: 23%;
+  left: 12%;
+}
+#kuja-varasto109 {
+  top: 25%;
+  left: 11%;
+}
+#kuja-varasto110 {
+  top: 27.5%;
+  left: 11%;
+}
+#kuja-varasto111 {
+  top: 29.5%;
+  left: 11.5%;
+}
+#kuja-varasto112 {
+  top: 32.5%;
+  left: 12%;
+}
+#kuja-varasto113 {
+  top: 34.5%;
+  left: 12%;
+}
+#kuja-varasto114 {
+  top: 36.5%;
+  left: 12%;
+}
+#keskusta-metsä115 {
+  top: 28%;
+  left: 47%;
+}
+#keskusta-metsä116 {
+  top: 30%;
+  left: 48%;
+}
+#keskusta-metsä117 {
+  top: 32%;
+  left: 49%;
+}
+#keskusta-metsä118 {
+  top: 34%;
+  left: 50%;
+}
+#keskusta-metsä119 {
+  top: 36%;
+  left: 52%;
+}
+#keskusta-metsä120 {
+  top: 38%;
+  left: 54%;
+}
+#keskusta-metsä121 {
+  top: 40%;
+  left: 56%;
+}
+.loclable.current-location {
+  color: #2b180a;
+  border: 2px solid #14532d;
+  box-shadow: 0 0 0 2px #facc15;
+  font-weight: 700;
+}
+.loclable.destination-class {
+  background-color: #0284c7;
+  color: #2b180a;
+  border: 2px solid #0369a1;
+  box-shadow: 0 0 0 2px #facc15;
+  font-weight: 700;
+}
+
+.active-path {
+  background-color: #262626;
+  color: #ffffff;
 }

@@ -125,10 +125,10 @@ vaja = Location(
 
 # Sijaintien väliset yhteydet
 keskusta.connections.extend([koti, metsä, kauppa, kuja])
-koti.connections.extend([keskusta, metsä])
+koti.connections.extend([keskusta, metsä, kellari])
 kellari.connections.extend([koti])
 kuja.connections.extend([keskusta, varasto])
-metsä.connections.extend([koti, keskusta, pelto, raunio])
+metsä.connections.extend([koti, keskusta, pelto, raunio, vaja])
 kauppa.connections.extend([keskusta])
 raunio.connections.extend([metsä, pelto])
 varasto.connections.extend([kuja])

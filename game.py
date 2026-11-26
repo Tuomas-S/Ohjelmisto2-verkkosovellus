@@ -50,8 +50,6 @@ while True:
             pelto.searchText = "Rakennustyömaasi pistää inhottavasti silmään. Ei ehkä mikään kaunein näky, mutta ajatus on nyt tärkein."
             koti.searchText = "Löydät avaimesi lipaston alta, muttet yletä ottamaan sitä. Ehkä kellarista löytyisi jotain kättä pidempää."
             sorkkarauta.foundText = "Kellarin seinustalla nojaava sorkkarauta voisi olla tarpeeksi pitkä avaimen saamiseen."
-            metsä.connections.append(vaja)
-            koti.connections.append(kellari)
             kellari.hasItem.append(sorkkarauta)
             input(f"\n{divide("Ennen kuin pääset rakentamaan pellolle, sinun tulee raivata alue. Kotisi lähellä metsän siimeksessä sijaitsee pieni vaja, jossa on työvälineitä. Muistaisit sen olevan lukossa.")}")
             player.status = "Hanki vajan avain"
@@ -61,7 +59,6 @@ while True:
             player.game_menu(player.status)
             check_environment(player)
         kauppa.isLocked = True
-        koti.connections = [keskusta, metsä, kellari]
         koti.searchText = "Etsit ja etsit rahojasi kaikkialta ilman minkäänlaista tulosta. Muistat, että veit eilen tavaroitasi kellariin. Ehkä rahat löytyisivät sieltä."
         kellari.hasItem.extend([rahaa, työkalut])
         input(fancyLine + divide("Saapuessasi kauppaan muistat, ettet pakannut rahojasi mukaan. Onneksi kotiin ei ole pitkä matka."))
@@ -108,7 +105,7 @@ while True:
         player.status = "Käy kaupassa"
 
     while player.status == "Palaa maan päälle":
-        while player.location != koti:
+        while player.location == kellari:
             player.game_menu(player.status)
             check_environment(player)
             if kellari in sorkkarauta.usedIn:
