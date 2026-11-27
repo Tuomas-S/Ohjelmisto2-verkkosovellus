@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Menu</title>
+    <link rel="stylesheet" href="Game-menu.css" />
+    <script src="Game.menu.js" defer></script>
+  </head>
+
+  <body>
+    <main id="game">
+      <!-- Top corner navigation bar -->
+      <header class="top">
+        <!-- Top left: menu dropdown -->
+        <div class="menu">
+          <button class="left-corner-button" id="menu-button">Valikko</button>
+          <div class="dropdown hidden" id="menu-list">
+            <button class="continue-button" id="continue-button">Jatka</button>
+            <button class="instructions-button" id="instructions-button">Ohjeet</button>
+            <button class="exit-button" id="exit-button">Poistu pelistä</button>
+          </div>
+        </div>
+
+        <!-- Top right: inventory dropdown -->
+        <div class="inventory">
+          <button class="right-corner-button" id="inventory-button">
+            Inventaario
+            <span class="inventory-count" id="inventory-count">0</span>
+          </button>
+
+          <div class="dropdown inventory-list hidden" id="inventory-box">
+            <div class="dropdown-title">Inventaario</div>
+            <div id="inventory-list">
+              <p class="menu-item">Inventaario on tyhjä</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Location screens -->
+      <section class="location" id="forest" hidden>
+        <h2>Metsä</h2>
+      </section>
+
+      <section class="location" id="house">
+        <h2>Koti</h2>
+      </section>
+
+      <section class="location" id="cellar" hidden>
+        <h2>Kellari</h2>
+      </section>
+
+      <section class="location" id="city" hidden>
+        <h2>Keskusta</h2>
+      </section>
+
+      <section class="location" id="storage" hidden>
+        <h2>Varasto</h2>
+      </section>
+
+      <section class="location" id="shed" hidden>
+        <h2>Vaja</h2>
+      </section>
+
+      <section class="location" id="store" hidden>
+        <h2>Kauppa</h2>
+      </section>
+
+      <section class="location" id="ruins" hidden>
+        <h2>Raunio</h2>
+      </section>
+
+      <section class="location" id="field" hidden>
+        <h2>Pelto</h2>
+      </section>
+
+      <section class="location" id="alley" hidden>
+        <h2>Kuja</h2>
+      </section>
+
+      <!-- Center item detail -->
+      <section class="modal hidden" id="item-modal">
+        <article class="panel item-card">
+          <figure class="item-media"> <img id="item-image"/> </figure>
+          <h3 id="item-name">Esineen nimi</h3>
+          <p id="item-description">Esineen kuvaus tulee tähän...</p>
+            <button class="card-button secondary" id="close-modal-button">
+              Sulje
+            </button>
+            <button class="card-button primary" id="use-item-button"> Käytä esinettä </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- Center main box -->
+      <section class="center panel">
+        <!-- Top mission bar -->
+        <div class="mission">
+          <div class="mission-title">Tehtävä:</div>
+
+          <span id="mission-text"> Pakkaa tavarasi mukaan </span>
+        </div>
+
+        <!-- Middle area: narrative or search progress -->
+        <div class="middle">
+          <div class="narrative">
+            <span id="narrative-text">
+              Olet kotona. Tutki aluetta löytääksesi tarvittavat varusteet ennen
+              lähtöä.
+            </span>
+          </div>
+
+          <div class="progress hidden" id="progress">
+            <span class="progress-number">0%</span>
+            <div class="progress-track">
+              <div class="progress-fill" id="progress-fill"></div>
+              <span class="progress-name">Tutkitaan</span>
+            </div>
+            <span class="progress-number" id="progress-value">100%</span>
+          </div>
+        </div>
+
+        <!-- Bottom buttons -->
+        <div class="bottom">
+          <button class="search-button" id="search-button">
+            Tutki aluetta
+          </button>
+
+          <div class="map">
+            <button class="map-button" id="map-button">Avaa kartta</button>
+
+            <div class="current-location-label">
+              Nykyinen sijainti:
+              <span id="current-location">Koti</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
